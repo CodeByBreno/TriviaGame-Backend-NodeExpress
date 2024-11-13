@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2016",   
+    "module": "commonjs",        
+    "esModuleInterop": true,      
+    "forceConsistentCasingInFileNames": true,         
+    "strict": true,    
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": "./",
+    "paths": {
+      "@entities/*": ["src/entities/*"],
+      "@repositories/*": ["src/repositories/*"],
+      "@utils/*": ["src/utils/*"],
+      "@config/*": ["src/config/*"],
+      "@routes/*": ["src/routes/*"],
+      "@services/*": ["src/services/*"]
+    }
+  }
+}
