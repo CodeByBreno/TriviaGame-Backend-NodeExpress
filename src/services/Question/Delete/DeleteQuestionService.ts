@@ -1,16 +1,15 @@
-import { AppError } from "@config/AppError";
-import { IBasicQuestionRepository } from "@repositories/QuestionRepository/IQuestionRepository";
+import { QuestionRepository } from "@repositories/QuestionRepository/implementation/QuestionRepository";
 import { inject, injectable } from "tsyringe";
 
 @injectable()
 class DeleteQuestionService {
   constructor(
-    @inject("BasicQuestionRepository")
-    private basicQuestionRepository: IBasicQuestionRepository
+    @inject("QuestionRepository")
+    private questionRepository: QuestionRepository
   ) {}
 
   async execute(id: string) {
-    await this.basicQuestionRepository.delete(id);
+    await this.questionRepository.delete(id);
   }
 }
 

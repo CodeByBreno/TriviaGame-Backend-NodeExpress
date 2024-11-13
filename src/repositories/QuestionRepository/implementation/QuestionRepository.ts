@@ -35,8 +35,9 @@ class QuestionRepository implements IQuestionRepository {
   }
 
   async findById(id: string): Promise<Question | null> {
-    const searchedObject = await this.ormRepository.findOneBy({
-      id_basic_question: id,
+    const searchedObject = await this.ormRepository.findOne({
+      where: { id_basic_question: id },
+      relations: ["options"],
     });
 
     return searchedObject;
@@ -74,6 +75,7 @@ class QuestionRepository implements IQuestionRepository {
   async findMany(take: number): Promise<Question[] | null> {
     const objects = await this.ormRepository.find({
       take: take,
+      relations: ["options"],
     });
 
     return objects;

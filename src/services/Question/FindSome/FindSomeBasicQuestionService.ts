@@ -1,16 +1,16 @@
 import { AppError } from "@config/AppError";
-import { IBasicQuestionRepository } from "@repositories/QuestionRepository/IQuestionRepository";
+import { IQuestionRepository } from "@repositories/QuestionRepository/IQuestionRepository";
 import { inject, injectable } from "tsyringe";
 
 @injectable()
 class FindManyBasicQuestionService {
   constructor(
-    @inject("BasicQuestionRepository")
-    private basicQuestionRepository: IBasicQuestionRepository
+    @inject("QuestionRepository")
+    private questionRepository: IQuestionRepository
   ) {}
 
   async execute(take: number = 20) {
-    const questions = await this.basicQuestionRepository.findMany(take);
+    const questions = await this.questionRepository.findMany(take);
 
     if (!questions || questions.length === 0) {
       throw new AppError("Erro ao encontrar perguntas", 404);

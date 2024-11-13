@@ -1,27 +1,18 @@
 import { AppError } from "@config/AppError";
-import { IBasicQuestionRepository } from "@repositories/QuestionRepository/IQuestionRepository";
+import { IQuestionRepository } from "@repositories/QuestionRepository/IQuestionRepository";
 import { inject, injectable } from "tsyringe";
 
 @injectable()
 class FindRandomQuestionService {
   constructor(
-    @inject("BasicQuestionRepository")
-    private basicQuestionRepository: IBasicQuestionRepository
+    @inject("QuestionRepository")
+    private questionRepository: IQuestionRepository
   ) {}
 
   async execute(type: string) {
     let question;
 
-    switch (type) {
-      case "basic":
-        question = await this.basicQuestionRepository.findRandomBasicQuestion();
-        break;
-      case "image":
-        question = await this.basicQuestionRepository.findRandomImageQuestion();
-        break;
-      default:
-        throw new AppError("Opção de pergunta inválida", 400);
-    }
+    question = await this.questionRepository.findRandomQuestion(type);
 
     if (!question) {
       throw new AppError("Pergunta não encontrada", 404);

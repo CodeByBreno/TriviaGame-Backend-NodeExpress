@@ -5,7 +5,7 @@ import { IQuestionRepository } from "@repositories/QuestionRepository/IQuestionR
 import { container } from "tsyringe";
 
 container.registerSingleton<IQuestionRepository>(
-  "BasicQuestionRepository",
+  "QuestionRepository",
   QuestionRepository
 );
 
