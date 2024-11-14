@@ -2,7 +2,7 @@ import { Repository } from "typeorm";
 import { IQuestionRepository } from "../IQuestionRepository";
 import { IQuestion } from "@entities/Question/IQuestion";
 import { Question } from "@entities/Question/Question";
-import { datasource } from "@src/data-source";
+import { datasource } from "../../../data-source";
 
 class QuestionRepository implements IQuestionRepository {
   private ormRepository: Repository<Question>;
