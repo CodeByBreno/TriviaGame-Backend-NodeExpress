@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.connectDatabase = exports.app = void 0;
 require("reflect-metadata");
 var _express = _interopRequireWildcard(require("express"));
-var _dataSource = require("../data-source");
+var _dataSource = require("./data-source");
 var _routes = require("./routes");
 var _morgan = _interopRequireDefault(require("morgan"));
 require("./config/container");

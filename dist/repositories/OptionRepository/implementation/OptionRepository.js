@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.OptionQuestionRepository = void 0;
-var _dataSource = require("data-source");
 var _OptionQuestion = require("../../../entities/OptionQuestion/OptionQuestion");
+var _dataSource = require("../../../data-source");
 class OptionQuestionRepository {
   constructor() {
     this.ormRepository = void 0;
