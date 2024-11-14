@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "target": "es2016",   
-    "module": "commonjs",        
-    "esModuleInterop": true,      
-    "forceConsistentCasingInFileNames": true,         
-    "strict": true,    
+    "outDir": "./dist",              // Garante que o código transpilado seja colocado em dist/
+    "target": "es2016",              // Target de ECMAScript
+    "module": "commonjs",            // Módulo CommonJS para Node.js
+    "esModuleInterop": true,         // Para garantir a compatibilidade entre módulos ES e CommonJS
+    "forceConsistentCasingInFileNames": true,  // Garante consistência nos nomes dos arquivos
+    "strict": true,                  // Habilita todas as verificações de tipo rigorosas
     "strictPropertyInitialization": false,
-    "skipLibCheck": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "baseUrl": "./",
+    "skipLibCheck": true,            // Ignora verificações nas definições de bibliotecas
+    "experimentalDecorators": true,  // Habilita decoradores
+    "emitDecoratorMetadata": true,   // Necessário para o uso de decoradores (como em TypeORM)
+    "baseUrl": "./",                 // Base para resolver módulos
     "paths": {
       "@entities/*": ["src/entities/*"],
       "@repositories/*": ["src/repositories/*"],
@@ -18,7 +18,9 @@
       "@utils/*": ["src/utils/*"],
       "@config/*": ["src/config/*"],
       "@routes/*": ["src/routes/*"],
-      "@services/*": ["src/services/*"],
+      "@services/*": ["src/services/*"]
     }
-  }
+  },
+  "include": ["src/**/*"],           // Inclui todos os arquivos TypeScript da pasta src
+  "exclude": ["node_modules"]        // Exclui node_modules para evitar compilação desnecessária
 }
