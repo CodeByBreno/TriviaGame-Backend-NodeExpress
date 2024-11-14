@@ -1,8 +1,8 @@
 import { Repository } from "typeorm";
-import { datasource } from "src/data-source";
 import { OptionQuestion } from "@entities/OptionQuestion/OptionQuestion";
 import { IOptionQuestionRepository } from "../IOptionRepository";
 import { IOptionQuestion } from "@entities/OptionQuestion/IOptionQuestion";
+import { datasource } from "@src/data-source";
 
 class OptionQuestionRepository implements IOptionQuestionRepository {
   private ormRepository: Repository<OptionQuestion>;

@@ -18,7 +18,8 @@
       "@utils/*": ["src/utils/*"],
       "@config/*": ["src/config/*"],
       "@routes/*": ["src/routes/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
+      "@src/*": ["src/*"]
     }
   }
 }
