@@ -1,5 +1,5 @@
 import { Repository } from "typeorm";
-import { datasource } from "data-source";
+import { datasource } from "src/data-source";
 import { IQuestionRepository } from "../IQuestionRepository";
 import { IQuestion } from "@entities/Question/IQuestion";
 import { Question } from "@entities/Question/Question";
