@@ -5,12 +5,12 @@ export const datasource = new DataSource({
   database: "./database.sqlite",
   entities:
     process.env.NODE_ENV === "production"
-      ? [__dirname + "/../entities/*/*.js"]
-      : [__dirname + "/../entities/*/*.ts"],
+      ? [__dirname + "/src/entities/*/*.js"]
+      : [__dirname + "/src/entities/*/*.ts"],
   migrations:
     process.env.NODE_ENV === "production"
-      ? [__dirname + "/../migrations/*.js"]
-      : [__dirname + "/../migrations/*.ts"],
+      ? [__dirname + "/src/migrations/*.js"]
+      : [__dirname + "/src/migrations/*.ts"],
   synchronize: false,
   logging: true,
 });
