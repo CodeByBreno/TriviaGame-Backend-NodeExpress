@@ -6,9 +6,9 @@ import { FindManyBasicQuestionService } from "@services/Question/FindSome/FindSo
 import "express-async-errors";
 import { Request, Response, Router } from "express";
 import { container } from "tsyringe";
-import { verifyCreateBasicQuestion } from "src/middlewares/Basic/verifyCreateBasicQuestion";
-import { verifyIDParams, verifyTakeQuery } from "src/middlewares/geral";
-import { verifyGetRandomQuestion } from "src/middlewares/Basic/verifyGetRandomQuestion";
+import { verifyCreateBasicQuestion } from "@middlewares/Basic/verifyCreateBasicQuestion";
+import { verifyGetRandomQuestion } from "@middlewares/Basic/verifyGetRandomQuestion";
+import { verifyIDParams, verifyTakeQuery } from "@middlewares/geral";
 
 const questionRouter = Router();
 

@@ -5,9 +5,18 @@
     "migration:generate": "node ./src/scripts/generate-migration.js",
     "migration:run": "npm run typeorm migration:run",
     "migration:show": "npm run typeorm migration:show",
-    "migration:revert": "npm run typeorm migration:revert"
+    "migration:revert": "npm run typeorm migration:revert",
+    "build": "babel src --extensions \".ts,.js\" --out-dir dist --copy-files"
   },
   "dependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@babel/runtime": "^7.26.0",
+    "babel-plugin-module-resolver": "^5.0.2",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
     "celebrate": "^15.0.3",
     "class-transformer": "^0.5.1",
     "express": "^4.21.1",
