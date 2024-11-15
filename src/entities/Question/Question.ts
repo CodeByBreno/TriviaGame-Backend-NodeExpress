@@ -27,7 +27,9 @@ class Question {
   @Column()
   type: string;
 
-  @OneToMany(() => OptionQuestion, (option) => option.question)
+  @OneToMany(() => OptionQuestion, (option) => option.question, {
+    cascade: true,
+  })
   options: OptionQuestion[];
 
   @Column({ nullable: true })
