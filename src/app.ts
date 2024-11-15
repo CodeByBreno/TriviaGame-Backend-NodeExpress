@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import express, { json, Request } from "express";
-import { datasource } from "./data-source";
+import { datasource } from "../data-source";
 import { router } from "./routes";
 import morgan from "morgan";
 import "@config/container";

@@ -21,6 +21,6 @@
       "@services/*": ["src/services/*"]
     }
   },
-  "include": ["src/**/*"],           // Inclui todos os arquivos TypeScript da pasta src
+  "include": ["src/**/*", "data-source.ts"],           // Inclui todos os arquivos TypeScript da pasta src
   "exclude": ["node_modules"]        // Exclui node_modules para evitar compilação desnecessária
 }

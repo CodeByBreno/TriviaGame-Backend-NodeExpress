@@ -10,7 +10,7 @@ import {
 import { Exclude } from "class-transformer";
 import { OptionQuestion } from "@entities/OptionQuestion/OptionQuestion";
 
-@Entity("basic_question")
+@Entity("question")
 class Question {
   @PrimaryGeneratedColumn("uuid")
   id_basic_question: string;
