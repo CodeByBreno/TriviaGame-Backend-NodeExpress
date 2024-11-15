@@ -12,7 +12,7 @@ class FindManyBasicQuestionService {
   async execute(take: number = 20) {
     const questions = await this.questionRepository.findMany(take);
 
-    if (!questions || questions.length === 0) {
+    if (!questions) {
       throw new AppError("Erro ao encontrar perguntas", 404);
     }
 
